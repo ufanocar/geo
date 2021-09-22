@@ -23,7 +23,7 @@ function showPosition(position) {
 function realizarPeticion(){
   console.log("hace peticion");
   let key='db55f1777b1a777d9db0bca240c105ba';
-  url = 'http://api.positionstack.com/v1/reverse?access_key='+key+'&query='+lat+','+long;
+  url = 'api.positionstack.com/v1/reverse?access_key='+key+'&query='+lat+','+long;
   peticion = new XMLHttpRequest();
   peticion.onreadystatechange = procesarRespuesta;
   peticion.open("GET", url, true );
