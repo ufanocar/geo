@@ -58,15 +58,22 @@ function fechaActual(){
 }
 
 function horaInicio(){
-    var f = new Date();
-	f = (f.getHours() + ":" + (f.getMinutes() + 35) + ":" + f.getSeconds());
+   var f = new Date();
+    let hora = f.getHours();
+    let minutos = f.getMinutes() + 30;
+    let segundos = 55;
+    if (minutos > 60){
+        minutos = minutos % 60;
+        hora +=1;
+    }
+	f = hora + ":" + minutos + ":" + segundos;
     return f;
 }
 
 function horaFin(){
     var f = new Date();
     let hora = f.getHours();
-    let minutos = f.getMinutes() + 60;
+    let minutos = f.getMinutes() + 70;
     let segundos = 55;
     if (minutos > 60){
         minutos = minutos % 60;
